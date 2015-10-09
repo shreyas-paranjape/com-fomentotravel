@@ -1,0 +1,27 @@
+<div class="row" style="margin:0px">
+	<div class="col-lg-7 col-mg-7 col-sm-7">
+		<div class="overlay-content">
+			{{{section.description}}}
+			<hr align="left" />
+		</div>
+	</div>
+	<div class="col-lg-5 col-mg-5 col-sm-5">
+		<div class="row">
+			<div class="col-lg-12 col-mg-12 col-sm-12 padding-5">
+				<img src="{{cloudinaryUrl section.imageInner}}" alt="{{section.name}}" />
+			</div>
+		</div>
+		{{#each rows}}
+			<div class="row">
+				{{#each categories}}
+					<div class="col-lg-6 col-md-6 col-sm-6 padding-5">
+						<a data-toggle="modal" class="btn no-padding rel" href="/category/{{key}}" data-target="#{{key}}">
+							<img src="{{cloudinaryUrl image}}" alt="{{name}}" />
+							<div class="link-text">{{name}}</div>
+						</a>
+					</div>
+				{{/each}}
+			</div>
+		{{/each}}
+	</div>
+</div>

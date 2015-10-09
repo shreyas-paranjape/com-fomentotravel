@@ -1,0 +1,59 @@
+{{!< default}}
+<header class="container page">
+	<a href="/">
+		<div>
+			<div>
+				<span style="margin-left: 50px;" class="fomento">Fomento</span>
+				<span class="travel">Travel</span>
+			</div>
+		</div>
+	</a>
+</header>
+<section class="relative">
+	<div>
+		<img src="{{cloudinaryUrl app.image}}" width="100%" />
+	</div>
+	<div class="container overlay">
+		<div class="row">
+			{{#each modules}}
+				<div class="col-xs-12 col-lg-4 col-md-4 col-sm-4">
+					<div class="box-link">
+						<a href="/module/{{key}}">
+							<h3>{{name}}</h3>
+						</a>
+						<hr />
+						<p>{{{description}}}</p>
+						<div class="explore"><a href="/module/{{key}}">Explore &gt;</a></div>
+					</div>
+				</div>
+			{{/each}}
+		</div>
+	</div>
+</section>
+<footer class="container">
+	<hr />
+	<nav class="row">
+		<ul>
+			<li class="col-lg-3 col-md-3 col-sm-3">
+				<a href="/legacy">
+					<h4>About</h4>
+				</a>
+			</li>
+			<li class="col-lg-3 col-md-3 col-sm-3">
+				<a href="/terms">
+					<h4>Terms &amp; conditions</h4>
+				</a>
+			</li>
+			<li class="col-lg-3 col-md-3 col-sm-3">
+				<a href="/policy">
+					<h4>Privacy policy</h4>
+				</a>
+			</li>
+			<li class="col-lg-3 col-md-3 col-sm-3">
+				<a href="/contact">
+					<h4>Contact</h4>
+				</a>
+			</li>
+		</ul>
+	</nav>
+</footer>

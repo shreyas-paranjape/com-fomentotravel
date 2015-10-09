@@ -1,0 +1,70 @@
+<header class="container page">
+	<a href="/">
+		<div>
+			<div>
+				<span style="margin-left: 50px;" class="fomento">Fomento</span>
+				<span class="travel">Travel</span>
+			</div>
+		</div>
+	</a>
+</header>
+<div class="blocks">
+	{{#each rows}}
+		<div class="row">
+			{{#each sections}}
+				<div class="col-lg-6 col-md-6 col-sm-6 no-padding">
+					<div style="margin: 5px">
+						<section class="block">
+							<header class="block-header">
+								<h3 class="underline">{{name}}</h3>
+								<a class="fadout" style="float:right" type="button">&times;</a>
+							</header>
+							<div class="content">
+								<img src="{{cloudinaryUrl imageOuter}}" alt="{{name}}" />
+							</div>
+							<div class="content-more" href="/section/{{key}}">
+							</div>
+						</section>
+					</div>
+				</div>
+			{{/each}}
+		</div>
+	{{/each}}
+</div>
+<footer class="container">
+	<hr />
+	<nav class="row">
+		<ul>
+			<li class="col-lg-3 col-md-3 col-sm-3">
+				<a href="legacy.html">
+					<h4>About</h4>
+				</a>
+			</li>
+			<li class="col-lg-3 col-md-3 col-sm-3">
+				<a href="terms.html">
+					<h4>Terms &amp; conditions</h4>
+				</a>
+			</li>
+			<li class="col-lg-3 col-md-3 col-sm-3">
+				<a href="policy.html">
+					<h4>Privacy policy</h4>
+				</a>
+			</li>
+			<li class="col-lg-3 col-md-3 col-sm-3">
+				<a href="contact.html">
+					<h4>Contact</h4>
+				</a>
+			</li>
+		</ul>
+	</nav>
+</footer>
+<script src="/js/block.js"></script>
+<script src="/js/modal.js"></script>
+{{#each categories}}
+	<div class="modal fade" id="{{key}}" tabindex="-1" role="dialog" aria-labelledby="{{name}}">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+			</div>
+		</div>
+	</div>
+{{/each}}

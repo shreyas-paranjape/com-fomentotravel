@@ -1,0 +1,435 @@
+// Bootstrap
+// =========
+
+// Bootstrap can be removed entirely by deleting this line.
+
+@import "bootstrap/bootstrap";
+
+// The easiest way to customise Bootstrap variables while
+// being able to easily override the source files with new
+// versions is to override the ones you want in another file.
+//
+// You can also add your own custom variables to this file for
+// use in your site stylesheets.
+
+@import "site/variables";
+
+
+// Site Styles
+// ===========
+
+// Add your own site style includes here
+@import "site/layout";
+
+
+
+/************************ Colour *************************************/
+
+$primary-color: #413f98;
+$secondary-color: #0fb0cf;
+$shadow-color: #000000;
+
+/************************ Fonts *************************************/
+
+@font-face {
+    font-family: 'BrandonGrotReg';
+    src: url('fonts/Brandon_reg.otf');
+}
+@font-face {
+    font-family: 'BrandonGrotBold';
+    src: url('fonts/Brandon_bld.otf');
+}
+@font-face {
+    font-family: 'BrandonGrotLight';
+    src: url('fonts/Brandon_light.otf');
+}
+@mixin border-radius($radius) {
+    @include border-top-radius( $radius);
+    @include border-bottom-radius( $radius);
+}
+body {
+    font-family: 'BrandonGrotReg';
+    p {
+        line-height: 113%;
+    }
+}
+.col-lg-4 {
+    padding: 35px;
+}
+.col-md-4 {
+    padding: 20px;
+}
+.col-sm-4 {
+    padding: 10px;
+}
+.no-padding {
+    padding: 0;
+}
+a:hover {
+    color: $primary_color;
+    text-decoration: none;
+}
+ul {
+    list-style-type: none;
+}
+.rel {
+    position: relative;
+}
+.padding-5 {
+    padding: 5px;
+}
+
+/************************ Header + Footer *************************************/
+
+header.page {
+    margin: 0px auto;
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+.fomento {
+    color: $primary_color;
+    padding-right: 5px;
+    text-transform: uppercase;
+    font-family: 'BrandonGrotBold';
+    font-size: 35px;
+}
+.travel {
+    color: $secondary_color;
+    text-transform: uppercase;
+    font-family: 'BrandonGrotReg';
+    font-size: 35px;
+}
+footer {
+    width: 100%;
+    position: relative;
+    margin-bottom: 20px;
+    hr {
+        border: none;
+        height: 2px;
+        color: $primary-color;
+        background-color: $primary-color;
+    }
+    a {
+        color: $primary-color;
+    }
+    a:hover {
+        color: $secondary-color;
+    }
+}
+
+/************************ Legacy *************************************/
+
+.legacy-col1 {
+    padding: 5 15 55 15;
+    margin-right: -5px;
+    background-color: rgba(65, 63, 152, 0.1);
+    .leg_head {
+        background-color: #413F98;
+        margin-left: -15px;
+        position: relative;
+        width: 106.5%;
+        height: 50px;
+        margin-top: -25px;
+        h2 {
+            color: white;
+            padding: 10 10 10 10;
+        }
+    }
+    p {
+        padding: 20 10 0 0;
+        text-align: justify;
+        color: rgba(0, 0, 0, 0.6);
+    }
+    a {
+        color: 0FB0CF;
+    }
+}
+.legacy-col2 {
+    padding: 5 15 25 15;
+    margin-left: -5px;
+    background-color: rgba(15, 176, 207, 0.1);
+    .leg_head {
+        background-color: #0FB0CF;
+        margin-left: -15px;
+        position: relative;
+        width: 106.5%;
+        height: 50px;
+        margin-top: -25px;
+        h2 {
+            color: white;
+            padding: 10 10 10 10;
+        }
+    }
+    p {
+        padding: 20 10 0 0;
+        text-align: justify;
+        color: rgba(0, 0, 0, 0.6);
+    }
+    a {
+        color: 0FB0CF;
+    }
+}
+.blocks1 {
+    width: 90%;
+    margin: 0 auto;
+    header {
+        h3 {
+            display: inline-block;
+            margin: 15px;
+            margin-left: 30px;
+            color: white;
+            font-family: 'BrandonGrotBold';
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+        h3:hover {
+            color: $secondary_color;
+        }
+        a {
+            color: white;
+            text-align: left;
+        }
+        a:hover {
+            color: $secondary-color;
+        }
+    }
+}
+
+/***************** Home page ***********************************/
+
+.relative {
+    position: relative;
+}
+.overlay {
+    position: relative;
+    top: -90px;
+    text-align: center;
+}
+.box-link {
+    background-color: $primary-color;
+    color: white;
+    margin: 0px auto;
+    padding: 0px 20px 20px 20px;
+    width: 90%;
+    p {
+        text-align: left;
+        padding-bottom: 10px;
+        padding-top: 5px;
+    }
+    .explore {
+        text-align: left;
+    }
+    h3 {
+        text-transform: uppercase;
+        font-family: 'BrandonGrotBold';
+        text-align: center;
+        padding-top: 15px;
+    }
+    hr {
+        width: 25%;
+        margin-top: 0px;
+        margin-bottom: 5px;
+    }
+    a {
+        color: white;
+        text-align: left;
+    }
+    a:hover {
+        color: $secondary-color;
+    }
+}
+
+/************************ Expanding blocks *************************************/
+
+.blocks {
+    width: 90%;
+    margin: 0 auto;
+    header {
+        h3 {
+            display: inline-block;
+            margin: 15px;
+            margin-left: 30px;
+            color: white;
+            font-family: 'BrandonGrotBold';
+            text-transform: uppercase;
+            //            text-decoration: underline;
+            opacity: 1.0;
+        }
+        h3:hover {
+            font-weight: bolder;
+        }
+        a {
+            color: white;
+            text-align: left;
+        }
+        a:hover {
+            color: $secondary-color;
+        }
+    }
+}
+.block {
+    padding: 0;
+    cursor: pointer;
+    position: relative;
+    .fadout {
+        display: none;
+        background-color: $secondary-color;
+        color: white;
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 40px;
+        height: 45px;
+        font-size: 35px;
+        vertical-align: middle;
+        text-align: center;
+        float: right;
+    }
+    .fadout:hover {
+        color: $shadow_color;
+    }
+}
+.block-header {
+    position: absolute;
+    top: 0px;
+    z-index: 999;
+    width: 100%;
+    background: url('../images/trans.png') no-repeat;
+    background-size: 100%;
+    .underline {
+        padding-bottom: 2px;
+        border-bottom: white 3px solid;
+    }
+}
+.clone {
+    position: absolute;
+    cursor: default;
+    z-index: 999;
+    .block-header {
+        width: 99.5%;
+    }
+}
+.content {
+    overflow: hidden;
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+.content-more {
+    display: none;
+    cursor: default;
+    background-color: white;
+    color: black;
+    padding-top: 65px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    opacity: 0;
+    .overlay-content {
+        padding: 0 10px 0 10px;
+        height: 80%;
+        margin-top: 15px;
+        margin-left: 5px;
+        p {
+            color: #666666;
+            font-size: 17.5px;
+            text-align: justify;
+        }
+        hr {
+            width: 20%;
+            height: 2px;
+            color: $primary-color;
+            background-color: $primary-color;
+        }
+    }
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+.link-text {
+    z-index: 999;
+    background-color: $secondary-color;
+    color: $primary-color;
+    width: 100%;
+    padding: 8;
+    height: auto;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'BrandonGrotBold';
+    font-size: 12px;
+    background-size: 100%;
+}
+.link-text:hover {
+    color: white;
+}
+
+/************************ Modal *************************************/
+
+.modal-dialog {
+    position: relative;
+    top: 30px;
+    left: 10px;
+    width: 1080px;
+}
+.modal-body {
+    .container1 {
+        background: #ececec;
+        background: #ececec;
+        margin-right: 0px;
+        margin-left: 0px;
+        h2 {
+            font-family: 'BrandonGrotBold';
+            color: black;
+            display: inline-block;
+            font-size: 20px;
+            font-weight: 800;
+            //padding-left: 1.4em;
+            text-transform: uppercase;
+        }
+        p {
+            color: #333;
+            font-size: 16px;
+            text-align: justify;
+            font-family: 'BrandonGrotReg';
+        }
+    }
+}
+.modal-no-padding {
+    padding: 0 0 0 20;
+}
+.modal-header {
+    .close {
+        font-size: 40px;
+    }
+    .modal-title {
+        font-weight: 800;
+        text-transform: uppercase;
+        font-family: 'BrandonGrotBold';
+        margin-bottom: -15px;
+    }
+}
+.terms {
+    width: 90%;
+    margin: 0 auto;
+    h2 {
+        font-family: 'BrandonGrotBold';
+        color: black;
+        display: inline-block;
+        //font-size: 20px;
+        //font-weight: 800;
+        //padding-left: 1.4em;
+        text-transform: uppercase;
+    }
+    h4 {
+        font-weight: bold;
+        font-size: 16px;
+        text-transform: uppercase;
+        font-family: 'BrandonGrotBold';
+    }
+    p {
+        text-align: justify;
+        color: #666666;
+    }
+}
